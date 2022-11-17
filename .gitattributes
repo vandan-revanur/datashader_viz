@@ -1,2 +1,3 @@
 *.python linguist-detectable=true
+libs/*.python linguist-detectable=true
 *.html linguist-detectable=true
