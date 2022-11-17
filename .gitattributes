@@ -1,3 +1,5 @@
 *.python linguist-detectable=true
 libs/*.python linguist-detectable=true
 *.html linguist-detectable=true
+libs/* linguist-documentation=false
+libs/* linguist-vendored
