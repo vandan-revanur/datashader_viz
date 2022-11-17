@@ -4,8 +4,8 @@ from holoviews.operation.datashader import datashade
 hv.extension('bokeh')
 import datashader as ds
 from datashader.utils import export_image
-from random_sampling import gen_random_lat_long_points
-from bokeh.plotting import show, save
+from libs.random_sampling import gen_random_lat_long_points
+from bokeh.plotting import show
 
 import geoviews
 
