@@ -4,6 +4,8 @@ hv.extension('bokeh')
 import datashader as ds
 from datashader.utils import export_image
 from libs.random_sampling import gen_random_lat_long_points
+from bokeh.plotting import show
+
 import geoviews
 
 corner_coords = [(13.396113029794005, 76.2895214406544),
@@ -27,8 +29,9 @@ fig = datashade(points, x_sampling=1, y_sampling=1, width=900, height=700)
 
 print('rendering the points')
 plot_points_map_mode = tile_provider * fig
-plot_points_map_mode.opts(style=dict(alpha=0.8), plot=plot_options)
+plot_points_map_mode.opts(width=900, height=700, show_grid=False)
 obj = hv.render(plot_points_map_mode)
 # show(obj)
+
 renderer = hv.renderer('matplotlib').instance(fig='svg')
-renderer.save(plot_points_map_mode,'html/random_coords_in_latlong_bounding_box.html')
+renderer.save(plot_points_map_mode,'html/random_coords_in_latlong_bounding_box')
